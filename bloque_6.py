@@ -220,12 +220,4 @@ while number > 0:
     counter_l += 1
 print("La cantidad de digitos es:", counter_l)
 
-## Ciclo while Parte - 2
 
-## Generaremos un programa que donde se genera un numero aleatorio y el usuario debe adivinar el numero segun sea la pista --> Numero magico
-
-from random import randint
-number = None
-random_number = randint(0,10)
-
-print(random_number)
