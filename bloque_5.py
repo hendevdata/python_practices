@@ -34,7 +34,7 @@ print(user_1)
 
 
 user_2 = {
-    "name": 'Henry',
+    "name": 'Cody',
     20: 30,
     True: 'this is the mail',
     (1,2): ['Python', 'Java', 'JavaScript'],
@@ -78,5 +78,34 @@ print(
 )
 
 print(
-    user_1.values() # Nos da el valor de todas las llaves del diccionario
+list(user_1.values()) # Nos da el valor de todas las llaves del diccionario
 )
+
+print(
+    list(user_1.items()) # Nos da el valor en una lista de tuplas --> Es una buena practica simpre trabajar estos metodos para hacerlo mas legibles
+)
+
+
+# Actualiar diccionarios --> se pueden modificar en tiempo de ejecucion ya que  los diccionarios son objetos mutables
+
+
+print(
+    len(user_2) # Se puede usar para ver cuantos apres de llaves hay en el diccionario
+)
+
+# Actaulizamos el nombre
+user_2["name"]  = "Codigo"
+print(user_2)
+print(len(user_2))
+
+user_2["Last Name"] = "Facilito"
+user_2["Perro"] = "Criollo"
+print(len(user_2))
+print(user_2)
+
+# Metodo Update
+
+user_2.update({
+    "Carro" : 'Twingo'
+    "Color Favorito"
+})

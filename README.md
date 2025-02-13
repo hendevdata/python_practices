@@ -1,1 +1,1 @@
-# This is jsut a practice repo related to a python curse.
+# This is just a practice repo related to a python curse.
