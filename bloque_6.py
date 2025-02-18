@@ -220,4 +220,22 @@ while number > 0:
     counter_l += 1
 print("La cantidad de digitos es:", counter_l)
 
+## Continue & Break
+## Nos permite saltarnos una iteracion o detener esta misma
 
+for number in range(1,101): ## Se hace un for con range() para obtener numeros del 1 - 10
+    if number % 2 == 0 : # Se busca que no se ejecute o se salta los numeros pares
+        continue ## Palabra reservada para que haga estos saltos
+    if number == 7:
+        break ## Rompe el ciclo for
+    print(number)
+    
+## La palabra break nos permite finalizar de forma abrupta
+
+## Pass --> Palabra reservada --> Bloques vacios
+
+var = None
+
+if var == None:
+    pass ## Con esto le indicamos a Python que el bloque esta vacio y no hara nada
+    ... ## Se pueden usar elipsis
