@@ -225,3 +225,6 @@ show_info(
     sudo=True
     
 )
+
+def show_info(user, last_name, *args, active=True, sudo=False, **kwargs):
+    print()
