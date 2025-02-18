@@ -1,4 +1,5 @@
-# Bloque Laboratorio
+# \
+    #Bloque Laboratorio
 
 '''
 Se debe crear una lista  longitud 10. Utilizando un ciclo for each 
@@ -135,5 +136,92 @@ user_name, active, age  = foo() # Desempaquetado de tuplas
 print(user_name, active, age)
 
 
+# Valores por Nombre y Posicion
+
+def full_name(first_name, last_name, prefix):
+    full_name = f"{prefix}, {first_name}, {last_name}"
+    return full_name
+print(
+    full_name(
+        first_name="Ark", 
+        last_name="ma", 
+        prefix="Mr")
+)
 
 
+# Valores por defectos
+# Recuerda que en la parte de  los Argumentos los valores que se coloquen por defecto deben ir de derecha a izquierda
+# Se pueden Sobre ESCRIBIR los valores al momento de declarar total
+
+def calculate_total(price, tax = 0.5, discount = 50):  # Para asignar valor default a discount y se omita el valor, esto para productos que no tienen descuentos
+    total = price + (price * tax) - discount
+    return total
+total = calculate_total(100)
+print("Total:", total)
+
+
+# Argumentos, una catidad de valores grande
+# * Posicion -- Se encargara de organizar los valores en una tupla
+# ** Nombre
+
+
+def suma(*numbers):
+    return sum(numbers) # Metodo sum 
+print(
+    suma(10, 20, 5, 24, 100) # Asignacion por posicion
+)
+
+def show_info(username, email, *scores):
+    print(username)
+    print(email)
+    
+    average = sum(scores) / len(scores)
+    print(average)
+    
+show_info(
+    "ark",
+    "ark@gmail.com",
+    90, 80, 70, 60, 50 # tupla
+)
+
+# Kwargs
+# ** -- Nombres
+# Tipo diccionario -- {}
+
+def show_info_k(**user):
+    for key, value in user.items():
+        print(key, "_", user)
+
+show_info_k(
+    username="ark",
+    email="ark@gmail.com",
+    age=20,
+    country="Mexico",
+    courses="Python",
+    lastlogin = "2024",
+    is_super_admin = "True"
+    
+)
+
+## Args and Kwars
+## Por convencion se usan estas dos palabras
+
+
+def show_info(*args, **kwargs):
+    print(">>> Info")
+    for value in args:
+        print(value)
+        
+    print("\n")
+    print(">>> Details")
+    for key, value in kwargs.items():
+        print(key, value)
+    
+show_info(
+    "Cody", "Facil", 12, "cody@cody.com",
+    courses = ["Python"],
+    score=10,
+    active=True,
+    sudo=True
+    
+)
